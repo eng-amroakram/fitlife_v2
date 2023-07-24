@@ -22,7 +22,7 @@ class UsersSeeder extends Seeder
             "gender" => "male",
             "status" => "active",
             "email_verified_at" => now(),
-            "password" => encrypt("12345678"),
+            "password" => Hash::make("12345678"),
             "created_at" => now(),
         ]);
     }
