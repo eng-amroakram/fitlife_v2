@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('exercises', function (Blueprint $table) {
             $table->id();
-            $table->json('muscle_ids')->unique();
-            $table->json('equipment_ids')->unique();
+            $table->json('muscle_ids');
+            $table->json('equipment_ids');
 
             $table->string('title_ar')->unique();
             $table->string('title_en')->unique();
