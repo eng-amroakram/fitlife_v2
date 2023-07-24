@@ -40,6 +40,7 @@ class FoodExchangesService extends Controller
     {
         return [
             __("ID"),
+            __("Image"),
             __("Title"),
             __("Status"),
             __("Actions")

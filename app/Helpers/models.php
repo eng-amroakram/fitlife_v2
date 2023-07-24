@@ -52,6 +52,7 @@ if (!function_exists('muscles')) {
     }
 }
 
+
 if (!function_exists('tags')) {
     function tags($search = null)
     {

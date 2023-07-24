@@ -78,6 +78,7 @@ return [
 
     "food-exchanges-service" => [
         "id" => 'property',
+        "image_table" => 'image',
         "title" => 'property',
         "status" => 'status',
         "actions" => ["delete", "edit"],

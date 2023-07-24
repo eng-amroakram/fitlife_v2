@@ -78,6 +78,36 @@ class Updater extends Component
                         continue;
                     }
 
+                    if ($input['name'] == "recipes") {
+                        $ids = json_encode($model->recipes);
+                        $this->emit('setSelect2Multi', recipes(true), "recipes_select_id_updater", $ids);
+                        continue;
+                    }
+
+                    if ($input['name'] == "muscles_ids") {
+                        $ids = json_encode($model->muscles_ids);
+                        $this->emit('setSelect2Multi', muscles(true), "muscles_ids_select_id_updater", $ids);
+                        continue;
+                    }
+
+                    if ($input['name'] == "food_exchange_ids") {
+                        $ids = json_encode($model->food_exchange_ids);
+                        $this->emit('setSelect2Multi', food_exchanges(true), "food_exchange_ids_select_id_updater", $ids);
+                        continue;
+                    }
+
+                    if ($input['name'] == "measurement_unit_ids") {
+                        $ids = json_encode($model->measurement_unit_ids);
+                        $this->emit('setSelect2Multi', measurement_units(true), "measurement_unit_ids_select_id_updater", $ids);
+                        continue;
+                    }
+
+                    if ($input['name'] == "place") {
+                        $ids = json_encode($model->place);
+                        $this->emit('setSelect2Multi', [__("Gym") => "gym", __("Home") => "home"], "place_select_id_updater", $ids);
+                        continue;
+                    }
+
                     $value = $model->{$input['name']};
                     $this->emit('select2', "#" . $input['id'], $value);
                 }

@@ -12,6 +12,8 @@ class FoodExchange extends Model
     use HasFactory;
     use ModelHelper;
 
+    protected $file_path = 'images/food_exchanges';
+
     protected $fillable = [
         'food_type_id',
         'measurement_unit_ids',
