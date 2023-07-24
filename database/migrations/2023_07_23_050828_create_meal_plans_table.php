@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('goal_id')->constrained('goals');
-            $table->json('meals')->default("{}");
+            $table->json('meals')->nullable();
             $table->string('title_ar');
             $table->string('title_en');
             $table->enum("status", ['active', 'inactive'])->default('active');
