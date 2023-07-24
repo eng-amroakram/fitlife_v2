@@ -74,7 +74,7 @@ class Updater extends Component
 
                     if ($input['name'] == "equipment_ids") {
                         $ids = json_encode($model->equipment_ids);
-                        $this->emit('setSelect2Multi', equipment(true), "equipment_select_id_updater", $ids);
+                        $this->emit('setSelect2Multi', equipment(true), "equipment_ids_select_id_updater", $ids);
                         continue;
                     }
 
