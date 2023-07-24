@@ -144,17 +144,41 @@
                 // Use join to join the elements into a string
                 let result = '[' + convertedArray.join(', ') + ']';
 
-                console.log(result);
-                console.log(result);
-                console.log(result);
-
-
                 if ($te != 'null' && $te) {
-                    const singleSelect = document.querySelector(id);
-                    const singleSelectInstance = mdb.Select.getInstance(singleSelect);
+                    let singleSelect = document.querySelector(id);
+                    let singleSelectInstance = mdb.Select.getInstance(singleSelect);
                     singleSelectInstance.setValue($te);
                 }
             });
+
+
+            Livewire.on('setSelect2Multi', function(data, inputid, ids) {
+                var $input = $("#" + inputid);
+                var singleSelect = document.querySelector("#" + inputid);
+                var singleSelectInstance = mdb.Select.getInstance(singleSelect);
+
+                $input.empty();
+                var array_ids = JSON.parse(ids);
+                console.log(array_ids);
+
+                $.each(data, function(index, value) {
+
+                    if (array_ids.includes(value + "")) {
+                        $input.append('<option selected value="' + value +
+                            '">' +
+                            index +
+                            '</option>');
+                    } else {
+                        $input.append('<option value="' + value +
+                            '">' +
+                            index +
+                            '</option>');
+                    }
+
+                });
+
+            });
+
 
             Livewire.on('setDataFields', function(data) {
                 // $(".reset-validation").text(" ");

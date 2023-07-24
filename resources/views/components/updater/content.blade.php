@@ -4,7 +4,7 @@
         @if ($size == 'modal-lg' || $size == 'modal-xl')
             <div class="row">
                 @foreach ($content['inputs'] as $input)
-                    <x-updater.inputs :input="$input" :classsize="'col-md-6 mb-3'" :size="$size" :updaterid="$updaterid">
+                    <x-updater.inputs :input="$input"  :classsize="'col-md-6 mb-3'" :size="$size" :updaterid="$updaterid">
                     </x-updater.inputs>
                 @endforeach
             </div>
@@ -12,7 +12,7 @@
 
         @if ($size == '')
             @foreach ($content['inputs'] as $input)
-                <x-updater.inputs :input="$input" :classsize="'col-md-12 mb-3'" :size="$size" :updaterid="$updaterid">
+                <x-updater.inputs :input="$input"  :classsize="'col-md-12 mb-3'" :size="$size" :updaterid="$updaterid">
                 </x-updater.inputs>
             @endforeach
         @endif

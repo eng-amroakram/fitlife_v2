@@ -65,8 +65,14 @@ class Updater extends Component
         foreach ($this->contents as $content) {
             foreach ($content['inputs'] as $input) {
                 if ($input['type'] == 'select') {
-                    $value = $model->{$input['name']};
-                    $this->emit('select2', "#" . $input['id'], $value);
+
+                    if ($input['name'] == 'meals') {
+                        $ids = json_encode($model->meals);
+                        $this->emit('setSelect2Multi', meals(true), "meals_select_id_updater", $ids);
+                    } else {
+                        $value = $model->{$input['name']};
+                        $this->emit('select2', "#" . $input['id'], $value);
+                    }
                 }
             }
         }
