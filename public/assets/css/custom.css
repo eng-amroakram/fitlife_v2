@@ -1,0 +1,61 @@
+@media (max-width: 767px) {
+    #customwidth {
+        /* Add your mobile styles or change the class */
+        /* Example: */
+        margin-bottom: 0.5rem !important;
+    }
+
+    #navbar-search-autocomplete {
+        margin-bottom: 0.5rem !important;
+    }
+
+    #removecontainerpadding {
+        padding: 0.5rem !important;
+    }
+
+    #createbuttondiv {
+        width: 100%;
+    }
+
+    #createbutton {
+        width: 100%;
+    }
+}
+
+/* Styles for full-screen view */
+@media (min-width: 768px) {
+    #customwidth {
+        /* Add your full-screen styles or change the class */
+        /* Example: */
+        margin-bottom: 0.0rem;
+    }
+
+    #removecontainerpadding {
+        padding: 4rem !important;
+    }
+
+    #navbar-search-autocomplete {
+        width: 50%;
+    }
+}
+
+
+.create-button {
+    border: 2px solid;
+    font-size: small;
+    border-color: #6fa546;
+    color: black;
+}
+
+.brown-color {
+    background-color: #5ba546 !important
+}
+
+.bg-brown-color {
+    background-color: #f6dfdf;
+}
+
+.mask-color {
+    background-color: rgba(101, 191, 68, 0.5);
+    z-index: 1;
+}

@@ -1,0 +1,17 @@
+.bg-color-green {
+    background-color: rgb(90, 139, 75);
+    color: #fff;
+}
+
+.color-green {
+    background-color: #e0fadb;
+}
+
+.button-hover-black:hover {
+    background-color: #c3c3c3;
+    color: #000;
+}
+
+.tab-error-color {
+    background-color: #ff050578;
+}
