@@ -25,7 +25,7 @@ class HomeController extends Controller
 
     public function landing()
     {
-        return view('landing', ['title' => __('Landing')]);
+        return view('auth.login', ['title' => __('Login')]);
     }
 
     public function login()
