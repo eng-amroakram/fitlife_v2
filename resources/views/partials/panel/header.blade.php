@@ -37,13 +37,13 @@
                             </a>
                         </li>
 
-                        <li>
+                        {{-- <li>
                             <a href="{{ route('panel.exercises.workouts') }}?lang={{ app()->getLocale() }}"
                                 class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() == 'panel.exercises.workouts' ? ' active' : '' }}">
                                 <i class="ms-3 fas fa-diagram-project"></i>
                                 <span>{{ __('Workouts') }}</span>
                             </a>
-                        </li>
+                        </li> --}}
 
                         <li>
                             <a href="{{ route('panel.exercises.muscles') }}?lang={{ app()->getLocale() }}"
