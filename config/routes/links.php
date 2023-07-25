@@ -32,7 +32,9 @@ return [
     "settings" => [
         "panel.settings.index",
         "panel.settings.users",
-        "panel.settings.goals"
+        "panel.settings.goals",
+        "panel.settings.questions",
+        "panel.settings.answers"
     ],
 
 ];

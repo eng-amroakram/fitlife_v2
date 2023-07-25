@@ -146,6 +146,21 @@ return [
         "type_name" => 'property',
         "status" => 'status',
         "actions" => ["delete", "edit"],
+    ],
+
+    "answers-service" => [
+        "id" => 'property',
+        "question_name" => 'property',
+        "answer" => 'property',
+        "status" => 'status',
+        "actions" => ["delete", "edit"],
+    ],
+
+    "questions-service" => [
+        "id" => 'property',
+        "question" => 'property',
+        "status" => 'status',
+        "actions" => ["delete", "edit"],
     ]
 
 

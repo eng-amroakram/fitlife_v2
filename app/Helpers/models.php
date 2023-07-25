@@ -10,6 +10,7 @@ use App\Models\Meal;
 use App\Models\MealType;
 use App\Models\MeasurementUnit;
 use App\Models\Muscle;
+use App\Models\Question;
 use App\Models\Recipe;
 use App\Models\Tag;
 
@@ -35,8 +36,6 @@ if (!function_exists('badge')) {
     }
 }
 
-
-
 if (!function_exists('muscles')) {
     function muscles($search = null)
     {
@@ -52,6 +51,20 @@ if (!function_exists('muscles')) {
     }
 }
 
+if (!function_exists('questions')) {
+    function questions($search = null)
+    {
+        $question = app()->getLocale() == "ar" ? "question_ar" : "question_en";
+
+        if ($search) {
+            return Question::data()->pluck($question, 'id')->mapWithKeys(function ($name, $id) {
+                return [$name => $id];
+            })->toArray();
+        }
+
+        return Question::data()->get();
+    }
+}
 
 if (!function_exists('tags')) {
     function tags($search = null)

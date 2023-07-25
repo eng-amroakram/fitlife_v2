@@ -243,9 +243,24 @@
                             </a>
                         </li>
 
+                        <li>
+                            <a href="{{ route('panel.settings.questions') }}?lang={{ app()->getLocale() }}"
+                                class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() == 'panel.settings.questions' ? ' active' : '' }}">
+                                <i class="ms-3 far fa-circle-question"></i>
+                                <span>{{ __('Questions') }}</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('panel.settings.answers') }}?lang={{ app()->getLocale() }}"
+                                class="list-group-item list-group-item-action py-2 ripple {{ Route::currentRouteName() == 'panel.settings.answers' ? ' active' : '' }}">
+                                <i class="ms-3 fas fa-voicemail"></i>
+                                <span>{{ __('Answers') }}</span>
+                            </a>
+                        </li>
+
                     </ul>
                 </a>
-
             </div>
         </div>
     </nav>

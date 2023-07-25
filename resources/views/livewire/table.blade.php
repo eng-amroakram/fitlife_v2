@@ -76,7 +76,7 @@
                     <option value="50">50</option>
                     <option value="100">100</option>
                 </select>
-                <label class="form-label select-label">الصفوف</label>
+                <label class="form-label select-label">{{__("Rows")}}</label>
             </div>
 
             <div>

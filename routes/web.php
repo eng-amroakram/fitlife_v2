@@ -76,6 +76,8 @@ Route::prefix('panel/')->as('panel.')->middleware(['web', 'auth'])->group(
                 Route::get('', 'index')->name('index');
                 Route::get('users', 'users')->name('users');
                 Route::get('goals', 'goals')->name('goals');
+                Route::get('questions', 'questions')->name('questions');
+                Route::get('answers', 'answers')->name('answers');
             }
         );
     }
@@ -84,5 +86,3 @@ Route::prefix('panel/')->as('panel.')->middleware(['web', 'auth'])->group(
 Route::get('testing', function () {
     return view('panel.testing', ['title' => 'testing']);
 });
-
-
