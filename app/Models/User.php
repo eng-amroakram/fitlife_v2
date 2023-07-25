@@ -95,15 +95,15 @@ class User extends Authenticatable
         return $this->image ? asset('storage/' . $this->image) : asset('assets/images/no-image-available.jpg');
     }
 
-    // public function getPasswordAttribute($value)
-    // {
-    //     return decrypt($value);
-    // }
+    public function getPasswordAttribute($value)
+    {
+        return decrypt($value);
+    }
 
-    // public function setPasswordAttribute($value)
-    // {
-    //     $this->attributes['password'] = encrypt($value);
-    // }
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = encrypt($value);
+    }
 
     public function scopeGetRules(Builder $builder, $id = "")
     {

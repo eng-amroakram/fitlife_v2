@@ -45,6 +45,7 @@ class Auth extends Component
         ]);
 
         $errors = array_map(fn ($value) => $value[0], $validator->errors()->toArray());
+
         if (count($errors)) {
             $this->emit('errors', $errors);
             return  false;

@@ -15,7 +15,7 @@ class AuthService extends Controller
         $user = User::where('email', $data['email'])->first();
 
         if ($user) {
-            if (Hash::check($data['password'], $user->password,)) {
+            if ($data['password'] == $user->password) {
                 Auth::login($user);
                 return redirect()->route('index');
             } else {

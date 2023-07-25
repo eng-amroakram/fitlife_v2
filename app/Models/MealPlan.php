@@ -30,7 +30,8 @@ class MealPlan extends Model
     {
         $filters = array_merge([
             'search' => '',
-            'status' => null
+            'status' => null,
+            'meals' => null,
         ], $filters);
 
         $builder->when($filters['search'] != '', function ($query) use ($filters) {
@@ -41,7 +42,12 @@ class MealPlan extends Model
         $builder->when($filters['search'] == '' && $filters['status'] != null, function ($query) use ($filters) {
             $query->whereIn('status', $filters['status']);
         });
+
+        $builder->when($filters['search'] == '' && $filters['meals'] != null, function ($query) use ($filters) {
+            $query->whereJsonContains('meals', $filters['meals']);
+        });
     }
+
     public function goal()
     {
         return $this->belongsTo(Goal::class);

@@ -5,5 +5,5 @@
             <option value="{{ $value }}">{{ $key }}</option>
         @endforeach
     </select>
-<label class="form-label select-label">{{ __("$input") }}</label>
+    <label class="form-label select-label">{{ __("$input") }}</label>
 </div>

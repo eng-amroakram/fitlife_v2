@@ -61,6 +61,8 @@ class MealPlansService extends Controller
                 __("Active") => "active",
                 __("In Active") => "inactive",
             ],
+
+            "meals" => meals(true),
         ];
     }
 
