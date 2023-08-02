@@ -48,6 +48,7 @@ class Exercise extends Model
             'equipment_id' => null,
             'type' => null,
             'level' => null,
+            'status' => null
         ], $filters);
 
         $builder->when($filters['search'] != '', function ($query) use ($filters) {
@@ -65,6 +66,10 @@ class Exercise extends Model
 
         $builder->when($filters['search'] == '' && $filters['type'] != null, function ($query) use ($filters) {
             $query->whereIn('type', $filters['type']);
+        });
+
+        $builder->when($filters['search'] == '' && $filters['status'] != null, function ($query) use ($filters) {
+            $query->whereIn('status', $filters['status']);
         });
 
         $builder->when($filters['search'] == '' && $filters['level'] != null, function ($query) use ($filters) {

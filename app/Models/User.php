@@ -71,8 +71,8 @@ class User extends Authenticatable
     {
         $filters = array_merge([
             'search' => '',
-            'type' => '',
-            'status' => '',
+            'type' => null,
+            'status' => null,
         ], $filters);
 
         $query->when($filters['search'] != '', function ($query) use ($filters) {
@@ -81,11 +81,11 @@ class User extends Authenticatable
                 ->orWhere('phone', 'like', '%' . $filters['search'] . '%');
         });
 
-        $query->when($filters['type'] != '', function ($query) use ($filters) {
+        $query->when($filters['type'] != '' && $filters['type'] != null, function ($query) use ($filters) {
             $query->whereIn('type', $filters['type']);
         });
 
-        $query->when($filters['status'] != '', function ($query) use ($filters) {
+        $query->when($filters['status'] != '' && $filters['status'] != null, function ($query) use ($filters) {
             $query->whereIn('status', $filters['status']);
         });
     }
